@@ -5,10 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { motion, useAnimation } from "framer-motion";
 import { ArrowRight, Star, Award, Users, Zap, X, ChevronDown, ExternalLink, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const [email, setEmail] = useState('');
   const controls = useAnimation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     controls.start(i => ({
@@ -20,7 +23,7 @@ const Index = () => {
 
   const handleGetEarlyAccess = (e) => {
     e.preventDefault();
-    window.location.href = 'https://tally.so/r/nGLbMO';
+    navigate('/early-access', { state: { email } });
   };
 
   const fadeInUp = {
@@ -92,11 +95,15 @@ const Index = () => {
 
           <motion.section id="testimonials" className="mb-24" custom={1} animate={controls}>
             <h3 className="text-4xl font-bold mb-12 text-center">What Our Early Users Say</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { name: "Sarah K.", role: "Fitness Enthusiast", quote: "StreakMate has completely transformed my workout routine. The daily challenges keep me accountable and motivated!", image: "/placeholder.svg" },
                 { name: "Alex M.", role: "Aspiring Developer", quote: "I've learned more in 30 days of coding challenges on StreakMate than I did in months of self-study. The community support is incredible!", image: "/placeholder.svg" },
-                { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "/placeholder.svg" }
+                { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "/placeholder.svg" },
+                { name: "Mike L.", role: "Entrepreneur", quote: "StreakMate's business challenges have given me the structure I needed to grow my startup. The insights from creators are invaluable!", image: "/placeholder.svg" },
+                { name: "Emma S.", role: "Language Learner", quote: "I've made more progress in my Spanish in 2 months with StreakMate than in a year of casual study. The daily practice really works!", image: "/placeholder.svg" },
+                { name: "Tom H.", role: "Aspiring Chef", quote: "The cooking challenges on StreakMate have expanded my culinary skills tremendously. I'm now confident in trying new recipes!", image: "/placeholder.svg" },
+                { name: "Zoe W.", role: "Digital Artist", quote: "StreakMate's art challenges push me out of my comfort zone daily. My portfolio has grown so much in just a few months!", image: "/placeholder.svg" }
               ].map((testimonial, index) => (
                 <motion.div
                   key={index}
@@ -158,14 +165,19 @@ const Index = () => {
                 <motion.div
                   key={index}
                   className="bg-white bg-opacity-10 p-6 rounded-lg overflow-hidden"
-                  initial={{ height: 80 }}
-                  whileHover={{ height: "auto" }}
+                  initial={{ height: "auto" }}
+                  animate={{ height: "auto" }}
                 >
-                  <h4 className="text-xl font-semibold mb-2 flex justify-between items-center">
-                    {item.question}
-                    <ChevronDown className="h-6 w-6" />
-                  </h4>
-                  <p className="text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.answer}</p>
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value={`item-${index}`}>
+                      <AccordionTrigger className="text-xl font-semibold">
+                        {item.question}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <p className="text-lg">{item.answer}</p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </motion.div>
               ))}
             </div>
@@ -205,7 +217,6 @@ const Index = () => {
           <div className="flex justify-center space-x-4 mb-6">
             <a href="#" className="hover:text-yellow-300 transition">Privacy Policy</a>
             <a href="#" className="hover:text-yellow-300 transition">Terms of Service</a>
-            <a href="#" className="hover:text-yellow-300 transition">Contact Us</a>
           </div>
           <div className="flex justify-center space-x-4 mb-6">
             <a href="#" className="hover:text-yellow-300 transition"><Facebook /></a>
@@ -213,12 +224,6 @@ const Index = () => {
             <a href="#" className="hover:text-yellow-300 transition"><Instagram /></a>
             <a href="#" className="hover:text-yellow-300 transition"><Linkedin /></a>
           </div>
-          <form onSubmit={(e) => { e.preventDefault(); toast.success("Message sent!"); }} className="max-w-md mx-auto mb-6">
-            <Input type="text" placeholder="Name" className="mb-2" required />
-            <Input type="email" placeholder="Email" className="mb-2" required />
-            <Textarea placeholder="Message" className="mb-2" required />
-            <Button type="submit" className="w-full bg-[#FF0000] hover:bg-red-600">Send Message</Button>
-          </form>
           <p>&copy; 2024 StreakMate. All rights reserved.</p>
         </div>
       </footer>
