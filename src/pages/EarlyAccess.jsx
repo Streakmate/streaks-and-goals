@@ -13,10 +13,14 @@ const EarlyAccess = () => {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    if (location.state?.email) {
+    const params = new URLSearchParams(location.search);
+    const emailParam = params.get('email');
+    if (emailParam) {
+      setEmail(emailParam);
+    } else if (location.state?.email) {
       setEmail(location.state.email);
     }
-  }, [location.state]);
+  }, [location.search, location.state]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

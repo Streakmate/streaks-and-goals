@@ -26,6 +26,10 @@ const Index = () => {
     navigate('/early-access', { state: { email } });
   };
 
+  const handleNavbarEarlyAccess = () => {
+    navigate('/early-access');
+  };
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -40,7 +44,7 @@ const Index = () => {
         </h1>
         <Button 
           className="bg-[#FF0000] hover:bg-red-600 text-white"
-          onClick={() => navigate('/early-access')}
+          onClick={handleNavbarEarlyAccess}
         >
           Get Early Access
         </Button>
@@ -105,8 +109,7 @@ const Index = () => {
                 { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "/placeholder.svg" },
                 { name: "Mike L.", role: "Entrepreneur", quote: "StreakMate's business challenges have given me the structure I needed to grow my startup. The insights from creators are invaluable!", image: "/placeholder.svg" },
                 { name: "Emma S.", role: "Language Learner", quote: "I've made more progress in my Spanish in 2 months with StreakMate than in a year of casual study. The daily practice really works!", image: "/placeholder.svg" },
-                { name: "Tom H.", role: "Aspiring Chef", quote: "The cooking challenges on StreakMate have expanded my culinary skills tremendously. I'm now confident in trying new recipes!", image: "/placeholder.svg" },
-                { name: "Zoe W.", role: "Digital Artist", quote: "StreakMate's art challenges push me out of my comfort zone daily. My portfolio has grown so much in just a few months!", image: "/placeholder.svg" }
+                { name: "Tom H.", role: "Aspiring Chef", quote: "The cooking challenges on StreakMate have expanded my culinary skills tremendously. I'm now confident in trying new recipes!", image: "/placeholder.svg" }
               ].map((testimonial, index) => (
                 <motion.div
                   key={index}
