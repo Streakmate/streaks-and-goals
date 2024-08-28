@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,9 +8,15 @@ const EarlyAccess = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [name, setName] = useState('');
-  const [email, setEmail] = useState(location.state?.email || '');
+  const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (location.state?.email) {
+      setEmail(location.state.email);
+    }
+  }, [location.state]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -38,7 +38,10 @@ const Index = () => {
         <h1 className="text-3xl font-bold">
           <span className="text-4xl">S</span>treakmate
         </h1>
-        <Button className="bg-[#FF0000] hover:bg-red-600 text-white">
+        <Button 
+          className="bg-[#FF0000] hover:bg-red-600 text-white"
+          onClick={() => navigate('/early-access')}
+        >
           Get Early Access
         </Button>
       </header>
