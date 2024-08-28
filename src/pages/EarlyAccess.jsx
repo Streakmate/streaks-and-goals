@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { supabase } from '../lib/supabase';
 
 const EarlyAccess = () => {
   const location = useLocation();
@@ -25,24 +26,19 @@ const EarlyAccess = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Simulate sending data to a backend API
-      const response = await fetch('https://api.example.com/early-access', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, phone }),
-      });
+      const { data, error } = await supabase
+        .from('early_access_users')
+        .insert([
+          { name, email, phone }
+        ]);
 
-      if (response.ok) {
-        setSubmitted(true);
-        toast.success("Thank you for joining StreakMate!");
-      } else {
-        toast.error("There was an error submitting your information. Please try again.");
-      }
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast.success("Thank you for joining StreakMate!");
     } catch (error) {
       console.error('Error:', error);
-      toast.error("There was a network error. Please try again later.");
+      toast.error("There was an error submitting your information. Please try again.");
     }
   };
 
