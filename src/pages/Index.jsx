@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { motion, useAnimation } from "framer-motion";
-import { ArrowRight, Star, Award, Users, Zap, X, ChevronDown, ExternalLink } from 'lucide-react';
+import { ArrowRight, Star, Award, Users, Zap, X, ChevronDown, ExternalLink, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Index = () => {
   const [email, setEmail] = useState('');
@@ -19,8 +20,7 @@ const Index = () => {
 
   const handleGetEarlyAccess = (e) => {
     e.preventDefault();
-    toast.success("You've been granted early access!");
-    setEmail('');
+    window.location.href = 'https://tally.so/r/nGLbMO';
   };
 
   const fadeInUp = {
@@ -35,15 +35,7 @@ const Index = () => {
         <h1 className="text-3xl font-bold">
           <span className="text-4xl">S</span>treakmate
         </h1>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-6">
-            <li><a href="#features" className="hover:text-yellow-300 transition">Features</a></li>
-            <li><a href="#testimonials" className="hover:text-yellow-300 transition">Testimonials</a></li>
-            <li><a href="#benefits" className="hover:text-yellow-300 transition">Benefits</a></li>
-            <li><a href="#faq" className="hover:text-yellow-300 transition">FAQ</a></li>
-          </ul>
-        </nav>
-        <Button className="bg-red-500 hover:bg-red-600 text-white">
+        <Button className="bg-[#FF0000] hover:bg-red-600 text-white">
           Get Early Access
         </Button>
       </header>
@@ -156,11 +148,12 @@ const Index = () => {
             <h3 className="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h3>
             <div className="space-y-6">
               {[
-                { question: "How does StreakMate work?", answer: "StreakMate connects you with creator-led challenges. You join a challenge, post daily updates, and maintain your streak while interacting with a supportive community. Our platform gamifies the process of building habits and achieving goals, making personal growth fun and engaging." },
-                { question: "Is StreakMate free to use?", answer: "StreakMate offers both free and premium features. Many challenges are free to join, allowing you to experience the core benefits of our platform. Premium features and certain creator-led challenges may require a subscription or one-time fee, providing access to exclusive content and advanced tools for accelerated growth." },
-                { question: "Can I create my own challenges?", answer: "Absolutely! Any user can create challenges on StreakMate. Whether you're a seasoned creator or someone passionate about a particular goal, you can design and share challenges with the community. This feature allows for a diverse range of growth opportunities and lets users inspire others with their unique expertise." },
-                { question: "What happens if I break my streak?", answer: "Breaking a streak is a natural part of the growth journey. If you miss a day, you can always start a new streak. Our community is here to support and motivate you to keep going. We provide tools to help you analyze your streak breaks, learn from them, and develop strategies to maintain longer streaks in the future." },
-                { question: "How do I interact with creators on the platform?", answer: "Creators on StreakMate can engage with participants through various means, including live Q&A sessions, personalized feedback on challenge submissions, and community forums. The level of interaction may vary depending on the challenge and the creator's approach, but our platform is designed to foster meaningful connections between creators and participants." }
+                { question: "What is StreakMate?", answer: "StreakMate is the world's first social media platform designed to help you grow alongside your favorite creators. It allows you to join daily challenges, track your progress, and share your journey through video updates. It's a community-driven platform where self-improvement meets social engagement." },
+                { question: "How is StreakMate different from other Social Media Apps?", answer: "Unlike traditional social media, where you passively consume content, StreakMate encourages active participation. You join or create challenges, share your progress, and engage with creators and other users in a meaningful way. It's not just about watching others succeed—it's about taking action and achieving your own goals." },
+                { question: "How can I meet my Favorite Creator?", answer: "By participating in challenges on StreakMate, you can earn exclusive rewards, including the chance to meet your favorite creators. Consistently engaging with challenges and staying active on the platform increases your chances of unlocking these special opportunities." },
+                { question: "Can I earn money through this app?", answer: "Yes, StreakMate offers various ways to earn money, such as through successful challenge completions, earning exclusive rewards, brand deals (we bring them to you) or potentially monetizing your own content as you grow within the platform." },
+                { question: "Is it Free?", answer: "Yes, StreakMate is free to join and use. However, there may be premium features or exclusive content that can be unlocked through participation, in-app purchases, or special rewards." },
+                { question: "Most Important! When is the Launch of the App?", answer: "The official launch date for StreakMate will be announced soon. By joining the waitlist, you'll be among the first to know and will secure your spot to start your journey as soon as the app goes live." }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -214,6 +207,18 @@ const Index = () => {
             <a href="#" className="hover:text-yellow-300 transition">Terms of Service</a>
             <a href="#" className="hover:text-yellow-300 transition">Contact Us</a>
           </div>
+          <div className="flex justify-center space-x-4 mb-6">
+            <a href="#" className="hover:text-yellow-300 transition"><Facebook /></a>
+            <a href="#" className="hover:text-yellow-300 transition"><Twitter /></a>
+            <a href="#" className="hover:text-yellow-300 transition"><Instagram /></a>
+            <a href="#" className="hover:text-yellow-300 transition"><Linkedin /></a>
+          </div>
+          <form onSubmit={(e) => { e.preventDefault(); toast.success("Message sent!"); }} className="max-w-md mx-auto mb-6">
+            <Input type="text" placeholder="Name" className="mb-2" required />
+            <Input type="email" placeholder="Email" className="mb-2" required />
+            <Textarea placeholder="Message" className="mb-2" required />
+            <Button type="submit" className="w-full bg-[#FF0000] hover:bg-red-600">Send Message</Button>
+          </form>
           <p>&copy; 2024 StreakMate. All rights reserved.</p>
         </div>
       </footer>
