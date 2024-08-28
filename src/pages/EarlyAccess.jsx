@@ -22,12 +22,28 @@ const EarlyAccess = () => {
     }
   }, [location.search, location.state]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send this data to your backend
-    console.log({ name, email, phone });
-    setSubmitted(true);
-    toast.success("Thank you for joining StreakMate!");
+    try {
+      // Simulate sending data to a backend API
+      const response = await fetch('https://api.example.com/early-access', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, phone }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        toast.success("Thank you for joining StreakMate!");
+      } else {
+        toast.error("There was an error submitting your information. Please try again.");
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error("There was a network error. Please try again later.");
+    }
   };
 
   const handleSecureSpot = () => {
