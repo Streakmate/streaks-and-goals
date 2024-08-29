@@ -53,7 +53,7 @@ const Index = () => {
       <main className="container mx-auto px-4 py-12">
         <motion.section className="text-center mb-24" {...fadeInUp}>
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
-          <p className="text-xl md:text-2xl mb-12">Join StreakMate and unlock your full potential alongside your favorite creators!</p>
+          <p className="text-xl md:text-2xl mb-16">Join Streakmate and unlock your full potential alongside your favorite creators!</p>
           <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
             <Input
               type="email"
@@ -108,7 +108,7 @@ const Index = () => {
             <h3 className="text-4xl font-bold mb-12 text-center">What Our Early Users Say</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { name: "Sarah K.", role: "Fitness Enthusiast", quote: "Streakmate has completely transformed my workout routine. The daily challenges keep me accountable and motivated!", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
+                { name: "Sarah K.", role: "Fitness Enthusiast", quote: "Streakmate has completely transformed my workout routine. The daily challenges keep me accountable and motivated!", image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
                 { name: "Alex M.", role: "Aspiring Developer", quote: "I've learned more in 30 days of coding challenges on Streakmate than I did in months of self-study. The community support is incredible!", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
                 { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
                 { name: "Mike L.", role: "Entrepreneur", quote: "Streakmate's business challenges have given me the structure I needed to grow my startup. The insights from creators are invaluable!", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
@@ -229,15 +229,21 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <p className="text-2xl font-bold mb-4">StreakMate</p>
           <p className="mb-6">Transforming lives, 1% daily.</p>
+          <Button 
+            className="mb-6 bg-[#346FF5] hover:bg-blue-700 text-white transition font-bold"
+            onClick={() => window.open('https://tally.so/r/wzZRZq', '_blank')}
+          >
+            Contact Us
+          </Button>
           <div className="flex justify-center space-x-4 mb-6">
-            <a href="#" className="hover:text-yellow-300 transition">Privacy Policy</a>
-            <a href="#" className="hover:text-yellow-300 transition">Terms of Service</a>
+            <a href="#" className="hover:text-blue-600 transition">Privacy Policy</a>
+            <a href="#" className="hover:text-blue-600 transition">Terms of Service</a>
           </div>
           <div className="flex justify-center space-x-4 mb-6">
-            <a href="#" className="hover:text-yellow-300 transition"><Facebook /></a>
-            <a href="#" className="hover:text-yellow-300 transition"><Twitter /></a>
-            <a href="#" className="hover:text-yellow-300 transition"><Instagram /></a>
-            <a href="#" className="hover:text-yellow-300 transition"><Linkedin /></a>
+            <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Facebook className="h-6 w-6" /></a>
+            <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Twitter className="h-6 w-6" /></a>
+            <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Instagram className="h-6 w-6" /></a>
+            <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Linkedin className="h-6 w-6" /></a>
           </div>
           <p>&copy; 2024 StreakMate. All rights reserved.</p>
         </div>
