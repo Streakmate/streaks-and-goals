@@ -31,7 +31,7 @@ const EarlyAccess = () => {
   };
 
   const handleSecureSpot = () => {
-    window.location.href = 'https://superprofile.bio/vig/66ca536b1c567c0013ae1c85';
+    window.open('https://tally.so/r/nGLbMO', '_blank');
   };
 
   if (submitted) {

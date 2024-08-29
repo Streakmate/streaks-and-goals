@@ -43,8 +43,8 @@ const Index = () => {
           <span className="text-4xl">S</span>treakmate
         </h1>
         <Button 
-          className="bg-[#FF0000] hover:bg-red-600 text-white"
-          onClick={handleNavbarEarlyAccess}
+          className="bg-[#FF0000] hover:bg-red-600 text-white font-bold"
+          onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
         >
           Get Early Access
         </Button>
@@ -188,7 +188,7 @@ const Index = () => {
               ))}
             </div>
             <div className="text-center mt-12">
-              <a href="https://streakmate.super.site" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-yellow-300 hover:text-yellow-100 transition">
+              <a href="https://tally.so/r/3jLRKY" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-yellow-300 hover:text-yellow-100 transition">
                 View more FAQs on our website
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
@@ -207,7 +207,11 @@ const Index = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <Button type="submit" className="bg-red-500 hover:bg-red-600 text-white transition">
+              <Button 
+                type="button" 
+                className="bg-red-500 hover:bg-red-600 text-white transition font-bold"
+                onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
+              >
                 Get Early Access <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>
@@ -219,7 +223,7 @@ const Index = () => {
       <footer className="bg-purple-800 py-12 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-2xl font-bold mb-4">StreakMate</p>
-          <p className="mb-6">Transforming lives, one challenge at a time.</p>
+          <p className="mb-6">Transforming lives, 1% daily.</p>
           <div className="flex justify-center space-x-4 mb-6">
             <a href="#" className="hover:text-yellow-300 transition">Privacy Policy</a>
             <a href="#" className="hover:text-yellow-300 transition">Terms of Service</a>
