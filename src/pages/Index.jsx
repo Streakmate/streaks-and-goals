@@ -37,8 +37,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-500 text-white">
-      <header className="py-6 px-4 md:px-8 flex justify-between items-center sticky top-0 bg-purple-800 bg-opacity-90 z-50">
+    <div className="min-h-screen bg-white text-gray-800">
+      <header className="py-6 px-4 md:px-8 flex justify-between items-center sticky top-0 bg-white shadow-md z-50">
         <h1 className="text-3xl font-bold">
           <span className="text-4xl">S</span>treakmate
         </h1>
@@ -93,7 +93,7 @@ const Index = () => {
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white bg-opacity-10 p-8 rounded-lg text-center transform hover:scale-105 transition duration-300"
+                  className="bg-gray-100 p-8 rounded-lg text-center transform hover:scale-105 transition duration-300 shadow-md"
                   whileHover={{ y: -5 }}
                 >
                   {feature.icon}
@@ -108,16 +108,16 @@ const Index = () => {
             <h3 className="text-4xl font-bold mb-12 text-center">What Our Early Users Say</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { name: "Sarah K.", role: "Fitness Enthusiast", quote: "Streakmate has completely transformed my workout routine. The daily challenges keep me accountable and motivated!", image: "https://source.unsplash.com/random/150x150?fitness" },
-                { name: "Alex M.", role: "Aspiring Developer", quote: "I've learned more in 30 days of coding challenges on Streakmate than I did in months of self-study. The community support is incredible!", image: "https://source.unsplash.com/random/150x150?developer" },
-                { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "https://source.unsplash.com/random/150x150?meditation" },
-                { name: "Mike L.", role: "Entrepreneur", quote: "Streakmate's business challenges have given me the structure I needed to grow my startup. The insights from creators are invaluable!", image: "https://source.unsplash.com/random/150x150?entrepreneur" },
-                { name: "Emma S.", role: "Language Learner", quote: "I've made more progress in my Spanish in 2 months with Streakmate than in a year of casual study. The daily practice really works!", image: "https://source.unsplash.com/random/150x150?language" },
-                { name: "Tom H.", role: "Aspiring Chef", quote: "The cooking challenges on Streakmate have expanded my culinary skills tremendously. I'm now confident in trying new recipes!", image: "https://source.unsplash.com/random/150x150?chef" }
+                { name: "Sarah K.", role: "Fitness Enthusiast", quote: "Streakmate has completely transformed my workout routine. The daily challenges keep me accountable and motivated!", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
+                { name: "Alex M.", role: "Aspiring Developer", quote: "I've learned more in 30 days of coding challenges on Streakmate than I did in months of self-study. The community support is incredible!", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
+                { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
+                { name: "Mike L.", role: "Entrepreneur", quote: "Streakmate's business challenges have given me the structure I needed to grow my startup. The insights from creators are invaluable!", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
+                { name: "Emma S.", role: "Language Learner", quote: "I've made more progress in my Spanish in 2 months with Streakmate than in a year of casual study. The daily practice really works!", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" },
+                { name: "Tom H.", role: "Aspiring Chef", quote: "The cooking challenges on Streakmate have expanded my culinary skills tremendously. I'm now confident in trying new recipes!", image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" }
               ].map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white bg-opacity-10 p-8 rounded-lg flex flex-col items-center text-center"
+                  className="bg-gray-100 p-8 rounded-lg flex flex-col items-center text-center shadow-md"
                   whileHover={{ scale: 1.05 }}
                 >
                   <img src={testimonial.image} alt={testimonial.name} className="w-24 h-24 rounded-full mb-4 mx-auto object-cover" />
@@ -133,7 +133,7 @@ const Index = () => {
             <h3 className="text-4xl font-bold mb-12 text-center">Benefits of Joining StreakMate</h3>
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div
-                className="bg-white bg-opacity-10 p-8 rounded-lg"
+                className="bg-gray-100 p-8 rounded-lg shadow-md"
                 whileHover={{ scale: 1.02 }}
               >
                 <h4 className="text-3xl font-semibold mb-6">What You Gain:</h4>
@@ -174,7 +174,7 @@ const Index = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white bg-opacity-10 p-6 rounded-lg overflow-hidden"
+                  className="bg-gray-100 p-6 rounded-lg overflow-hidden shadow-md"
                   initial={{ height: "auto" }}
                   animate={{ height: "auto" }}
                 >
@@ -224,7 +224,7 @@ const Index = () => {
         </motion.div>
       </main>
 
-      <footer className="bg-purple-800 py-12 px-4 text-center">
+      <footer className="bg-gray-100 py-12 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-2xl font-bold mb-4">StreakMate</p>
           <p className="mb-6">Transforming lives, 1% daily.</p>

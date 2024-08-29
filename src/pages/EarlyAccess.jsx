@@ -36,7 +36,7 @@ const EarlyAccess = () => {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center text-white">
+      <div className="min-h-screen bg-white flex items-center justify-center text-gray-800">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4">Thank You for Joining StreakMate!</h2>
           <p className="text-xl mb-8">We're excited to have you on board. Get ready to transform your life!</p>
@@ -50,7 +50,7 @@ const EarlyAccess = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center text-white">
-      <div className="bg-white bg-opacity-10 p-8 rounded-lg max-w-md w-full">
+      <div className="bg-gray-100 p-8 rounded-lg max-w-md w-full shadow-md">
         <h2 className="text-3xl font-bold mb-6 text-center">Get Early Access to StreakMate</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
