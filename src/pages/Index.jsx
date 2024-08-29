@@ -38,12 +38,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      <header className="py-6 px-4 md:px-8 flex justify-between items-center sticky top-0 bg-white shadow-md z-50">
-        <h1 className="text-3xl font-bold">
+      <header className="py-4 px-4 md:px-8 flex justify-between items-center sticky top-0 bg-white shadow-md z-50">
+        <h1 className="text-3xl font-bold" style={{ color: '#346FF5' }}>
           <span className="text-4xl">S</span>treakmate
         </h1>
         <Button 
-          className="bg-[#FF0000] hover:bg-red-700 text-white font-bold"
+          className="bg-[#FF0000] hover:bg-red-700 text-white font-bold py-2 px-4"
           onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
         >
           <strong>Get Early Access</strong>
@@ -52,7 +52,7 @@ const Index = () => {
 
       <main className="container mx-auto px-4 py-12">
         <motion.section className="text-center mb-24" {...fadeInUp}>
-          <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself daily by 1%</h2>
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
           <p className="text-xl md:text-2xl mb-12">Join StreakMate and unlock your full potential alongside your favorite creators!</p>
           <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
             <Input
@@ -174,9 +174,10 @@ const Index = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-100 p-6 rounded-lg overflow-hidden shadow-md"
-                  initial={{ height: "auto" }}
-                  animate={{ height: "auto" }}
+                  className="bg-white p-6 rounded-lg overflow-hidden shadow-md"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Accordion type="single" collapsible>
                     <AccordionItem value={`item-${index}`}>
