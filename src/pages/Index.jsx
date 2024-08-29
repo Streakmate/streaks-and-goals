@@ -53,7 +53,7 @@ const Index = () => {
       <main className="container mx-auto px-4 py-12">
         <motion.section className="text-center mb-24" {...fadeInUp}>
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
-          <p className="text-xl md:text-2xl mb-16">Join Streakmate and unlock your full potential alongside your favorite creators!</p>
+          <p className="text-xl md:text-2xl mb-20">Join Streakmate and unlock your full potential alongside your favorite creators!</p>
           <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
             <Input
               type="email"
@@ -181,7 +181,7 @@ const Index = () => {
                 >
                   <Accordion type="single" collapsible>
                     <AccordionItem value={`item-${index}`}>
-                      <AccordionTrigger className="text-xl font-semibold">
+                      <AccordionTrigger className="text-lg sm:text-xl font-semibold">
                         {item.question}
                       </AccordionTrigger>
                       <AccordionContent>
@@ -193,7 +193,7 @@ const Index = () => {
               ))}
             </div>
             <div className="text-center mt-12">
-              <a href="https://tally.so/r/3jLRKY" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-yellow-300 hover:text-yellow-100 transition">
+              <a href="https://tally.so/r/3jLRKY" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-yellow-300 hover:text-yellow-100 transition font-semibold underline">
                 View more FAQs on our website
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
