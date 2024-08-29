@@ -53,8 +53,8 @@ const Index = () => {
       <main className="container mx-auto px-4 py-12">
         <motion.section className="text-center mb-24" {...fadeInUp}>
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
-          <p className="text-xl md:text-2xl mb-20">Join Streakmate and unlock your full potential alongside your favorite creators!</p>
-          <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+          <p className="text-xl md:text-2xl mb-24">Join Streakmate and unlock your full potential alongside your favorite creators!</p>
+          <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4 mt-8">
             <Input
               type="email"
               placeholder="Enter your email"
@@ -179,13 +179,13 @@ const Index = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Accordion type="single" collapsible>
+                  <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value={`item-${index}`}>
-                      <AccordionTrigger className="text-lg sm:text-xl font-semibold">
+                      <AccordionTrigger className="text-base sm:text-lg md:text-xl font-semibold text-left">
                         {item.question}
                       </AccordionTrigger>
                       <AccordionContent>
-                        <p className="text-lg">{item.answer}</p>
+                        <p className="text-sm sm:text-base md:text-lg">{item.answer}</p>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -193,9 +193,9 @@ const Index = () => {
               ))}
             </div>
             <div className="text-center mt-12">
-              <a href="https://tally.so/r/3jLRKY" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-yellow-300 hover:text-yellow-100 transition font-semibold underline">
+              <a href="https://tally.so/r/3jLRKY" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-500 hover:text-blue-700 transition font-semibold underline text-lg">
                 View more FAQs on our website
-                <ExternalLink className="ml-2 h-4 w-4" />
+                <ExternalLink className="ml-2 h-5 w-5" />
               </a>
             </div>
           </motion.section>
