@@ -8,8 +8,10 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
 }
 
+let supabase
+
 try {
-  export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  supabase = createClient(supabaseUrl, supabaseAnonKey)
 } catch (error) {
   console.error('Error creating Supabase client:', error.message)
   throw error
@@ -18,3 +20,5 @@ try {
 // Log the Supabase URL and key (remove in production)
 console.log('Supabase URL:', supabaseUrl)
 console.log('Supabase Anon Key:', supabaseAnonKey)
+
+export { supabase }
