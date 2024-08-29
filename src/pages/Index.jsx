@@ -43,10 +43,10 @@ const Index = () => {
           <span className="text-4xl">S</span>treakmate
         </h1>
         <Button 
-          className="bg-[#FF0000] hover:bg-red-600 text-white font-bold"
+          className="bg-[#FF0000] hover:bg-red-700 text-white font-bold"
           onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
         >
-          Get Early Access
+          <strong>Get Early Access</strong>
         </Button>
       </header>
 
@@ -63,8 +63,12 @@ const Index = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Button type="submit" className="bg-red-500 hover:bg-red-600 text-white transition">
-              Get Early Access <ArrowRight className="ml-2 h-4 w-4" />
+            <Button 
+              type="button" 
+              className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
+              onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
+            >
+              <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </form>
           <p className="mt-4 text-sm opacity-75">Be among the first 1000 to get exclusive lifetime benefits!</p>
@@ -104,12 +108,12 @@ const Index = () => {
             <h3 className="text-4xl font-bold mb-12 text-center">What Our Early Users Say</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { name: "Sarah K.", role: "Fitness Enthusiast", quote: "StreakMate has completely transformed my workout routine. The daily challenges keep me accountable and motivated!", image: "/placeholder.svg" },
-                { name: "Alex M.", role: "Aspiring Developer", quote: "I've learned more in 30 days of coding challenges on StreakMate than I did in months of self-study. The community support is incredible!", image: "/placeholder.svg" },
-                { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "/placeholder.svg" },
-                { name: "Mike L.", role: "Entrepreneur", quote: "StreakMate's business challenges have given me the structure I needed to grow my startup. The insights from creators are invaluable!", image: "/placeholder.svg" },
-                { name: "Emma S.", role: "Language Learner", quote: "I've made more progress in my Spanish in 2 months with StreakMate than in a year of casual study. The daily practice really works!", image: "/placeholder.svg" },
-                { name: "Tom H.", role: "Aspiring Chef", quote: "The cooking challenges on StreakMate have expanded my culinary skills tremendously. I'm now confident in trying new recipes!", image: "/placeholder.svg" }
+                { name: "Sarah K.", role: "Fitness Enthusiast", quote: "Streakmate has completely transformed my workout routine. The daily challenges keep me accountable and motivated!", image: "https://source.unsplash.com/random/150x150?fitness" },
+                { name: "Alex M.", role: "Aspiring Developer", quote: "I've learned more in 30 days of coding challenges on Streakmate than I did in months of self-study. The community support is incredible!", image: "https://source.unsplash.com/random/150x150?developer" },
+                { name: "Priya R.", role: "Meditation Practitioner", quote: "The guided meditation challenges have helped me establish a consistent mindfulness practice. I feel more centered and focused in my daily life.", image: "https://source.unsplash.com/random/150x150?meditation" },
+                { name: "Mike L.", role: "Entrepreneur", quote: "Streakmate's business challenges have given me the structure I needed to grow my startup. The insights from creators are invaluable!", image: "https://source.unsplash.com/random/150x150?entrepreneur" },
+                { name: "Emma S.", role: "Language Learner", quote: "I've made more progress in my Spanish in 2 months with Streakmate than in a year of casual study. The daily practice really works!", image: "https://source.unsplash.com/random/150x150?language" },
+                { name: "Tom H.", role: "Aspiring Chef", quote: "The cooking challenges on Streakmate have expanded my culinary skills tremendously. I'm now confident in trying new recipes!", image: "https://source.unsplash.com/random/150x150?chef" }
               ].map((testimonial, index) => (
                 <motion.div
                   key={index}
@@ -209,10 +213,10 @@ const Index = () => {
               />
               <Button 
                 type="button" 
-                className="bg-red-500 hover:bg-red-600 text-white transition font-bold"
+                className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
                 onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
               >
-                Get Early Access <ArrowRight className="ml-2 h-4 w-4" />
+                <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>
             <p className="mt-4 text-sm opacity-75">Limited slots available. Don't miss out on this opportunity!</p>
