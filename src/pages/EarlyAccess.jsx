@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { supabase } from '../lib/supabase';
 
 const EarlyAccess = () => {
   const location = useLocation();
@@ -23,23 +22,12 @@ const EarlyAccess = () => {
     }
   }, [location.search, location.state]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const { data, error } = await supabase
-        .from('early_access_users')
-        .insert([
-          { name, email, phone }
-        ]);
-
-      if (error) throw error;
-
-      setSubmitted(true);
-      toast.success("Thank you for joining StreakMate!");
-    } catch (error) {
-      console.error('Error:', error);
-      toast.error("There was an error submitting your information. Please try again.");
-    }
+    // Here you would typically send the data to your backend or handle it as needed
+    console.log('Form submitted:', { name, email, phone });
+    setSubmitted(true);
+    toast.success("Thank you for joining StreakMate!");
   };
 
   const handleSecureSpot = () => {
