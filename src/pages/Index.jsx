@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { motion, useAnimation } from "framer-motion";
-import { ArrowRight, Star, Award, Users, Zap, X, ChevronDown, ExternalLink, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { ArrowRight, Star, Award, Users, Zap, X, ChevronDown, ExternalLink, Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useNavigate } from 'react-router-dom';
 
@@ -248,6 +248,7 @@ const Index = () => {
             <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Twitter className="h-6 w-6" /></a>
             <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Instagram className="h-6 w-6" /></a>
             <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Linkedin className="h-6 w-6" /></a>
+            <a href="https://github.com/yourusername/streakmate" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition"><Github className="h-6 w-6" /></a>
           </div>
           <p>&copy; 2024 StreakMate. All rights reserved.</p>
         </div>
