@@ -22,6 +22,12 @@ const EarlyAccess = () => {
     }
   }, [location.search, location.state]);
 
+  useEffect(() => {
+    if (email) {
+      console.log("Email set:", email);
+    }
+  }, [email]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you would typically send the data to your backend or handle it as needed

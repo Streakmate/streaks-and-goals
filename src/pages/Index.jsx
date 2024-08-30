@@ -26,6 +26,10 @@ const Index = () => {
     navigate('/early-access', { state: { email } });
   };
 
+  const handleExternalEarlyAccess = () => {
+    window.open('https://tally.so/r/nGLbMO', '_blank');
+  };
+
   const handleNavbarEarlyAccess = () => {
     navigate('/early-access');
   };
@@ -66,7 +70,7 @@ const Index = () => {
             <Button 
               type="button" 
               className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
-              onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
+              onClick={handleExternalEarlyAccess}
             >
               <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
