@@ -10,7 +10,6 @@ export default defineConfig({
     port: "8080",
   },
   plugins: [react()],
-  base: '/streaks-and-goals/',
   resolve: {
     alias: [
       {
