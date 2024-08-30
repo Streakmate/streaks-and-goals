@@ -21,6 +21,19 @@ const Index = () => {
     }));
   }, [controls]);
 
+  useEffect(() => {
+    // Add canonical link
+    const link = document.createElement('link');
+    link.rel = 'canonical';
+    link.href = 'https://streakmate.in';
+    document.head.appendChild(link);
+
+    // Clean up function
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   const handleGetEarlyAccess = (e) => {
     e.preventDefault();
     navigate('/early-access', { state: { email } });
@@ -248,7 +261,7 @@ const Index = () => {
             <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Twitter className="h-6 w-6" /></a>
             <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Instagram className="h-6 w-6" /></a>
             <a href="#" className="text-gray-600 hover:text-blue-600 transition"><Linkedin className="h-6 w-6" /></a>
-            <a href="https://github.com/yourusername/streakmate" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition"><Github className="h-6 w-6" /></a>
+            <a href="https://github.com/streakmate/streakmate.github.io" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition"><Github className="h-6 w-6" /></a>
           </div>
           <p>&copy; 2024 StreakMate. All rights reserved.</p>
         </div>
