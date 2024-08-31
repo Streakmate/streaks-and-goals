@@ -70,9 +70,8 @@ const Index = () => {
       <main className="container mx-auto px-4 py-12">
         <motion.section className="text-center mb-24" {...fadeInUp}>
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
-          <p className="text-xl md:text-2xl mb-24">Join Streakmate to transform your life with your favorite creators!</p>
-          <div className="mb-16"></div>
-          <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4 mt-8">
+          <p className="text-xl md:text-2xl mb-24 mt-8">Join Streakmate to transform your life with your favorite creators!</p>
+          <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
             <Input
               type="email"
               placeholder="Enter your email"
