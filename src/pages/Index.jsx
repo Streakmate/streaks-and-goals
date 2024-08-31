@@ -55,7 +55,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      <header className="py-4 px-4 md:px-8 flex justify-between items-center sticky top-0 bg-white shadow-md z-50">
+      <header className="py-4 px-4 md:px-8 flex justify-between items-center sticky top-0 bg-white z-50">
         <h1 className="text-3xl font-bold" style={{ color: '#346FF5' }}>
           <span className="text-4xl">S</span>treakmate
         </h1>
