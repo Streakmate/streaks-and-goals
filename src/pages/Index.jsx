@@ -67,7 +67,7 @@ const Index = () => {
         </Button>
       </header>
 
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 pt-20 pb-12">
         <motion.section className="text-center mb-24" {...fadeInUp}>
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
           <p className="text-xl md:text-2xl mb-16 mt-12">Join Streakmate to transform your life with your favorite creators!</p>
