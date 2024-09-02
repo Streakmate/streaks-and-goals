@@ -71,23 +71,13 @@ const Index = () => {
         <motion.section className="text-center mb-24" {...fadeInUp}>
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
           <p className="text-xl md:text-2xl mb-16 mt-12">Join Streakmate to transform your life with your favorite creators!</p>
-          <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              required
-              className="flex-grow text-black"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <Button 
-              type="button" 
-              className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
-              onClick={handleExternalEarlyAccess}
-            >
-              <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </form>
+          <Button 
+            type="button" 
+            className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
+            onClick={handleExternalEarlyAccess}
+          >
+            <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
           <p className="mt-4 text-sm opacity-75">Be among the first 1000 to get exclusive lifetime benefits!</p>
         </motion.section>
 
@@ -220,23 +210,13 @@ const Index = () => {
           <motion.section className="text-center mb-24" custom={4} animate={controls}>
             <h3 className="text-4xl font-bold mb-6">Ready to Transform Your Life?</h3>
             <p className="text-xl mb-8">Get early access to StreakMate now and be part of the revolution in personal growth!</p>
-            <form onSubmit={handleGetEarlyAccess} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                required
-                className="flex-grow text-black"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <Button 
-                type="button" 
-                className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
-                onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
-              >
-                <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
+            <Button 
+              type="button" 
+              className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
+              onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
+            >
+              <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
             <p className="mt-4 text-sm opacity-75">Limited slots available. Don't miss out on this opportunity!</p>
           </motion.section>
         </motion.div>
