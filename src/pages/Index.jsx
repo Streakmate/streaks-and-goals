@@ -60,7 +60,7 @@ const Index = () => {
           <span className="text-4xl">S</span>treakmate
         </h1>
         <Button 
-          className="bg-[#FF0000] hover:bg-red-700 text-white font-bold py-2 px-4"
+          className="bg-[#FF0000] hover:bg-red-700 text-white font-bold py-3 px-6 text-lg"
           onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
         >
           <strong>Get Early Access</strong>
@@ -73,10 +73,10 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-16 mt-12">Join Streakmate to transform your life with your favorite creators!</p>
           <Button 
             type="button" 
-            className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
+            className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold py-4 px-8 text-xl"
             onClick={handleExternalEarlyAccess}
           >
-            <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
+            <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <p className="mt-4 text-sm opacity-75">Be among the first 1000 to get exclusive lifetime benefits!</p>
         </motion.section>
@@ -212,10 +212,10 @@ const Index = () => {
             <p className="text-xl mb-8">Get early access to StreakMate now and be part of the revolution in personal growth!</p>
             <Button 
               type="button" 
-              className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold"
+              className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold py-4 px-8 text-xl"
               onClick={() => window.open('https://tally.so/r/nGLbMO', '_blank')}
             >
-              <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-4 w-4" />
+              <strong>Get Early Access</strong> <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <p className="mt-4 text-sm opacity-75">Limited slots available. Don't miss out on this opportunity!</p>
           </motion.section>
@@ -227,7 +227,7 @@ const Index = () => {
           <p className="text-2xl font-bold mb-4">StreakMate</p>
           <p className="mb-6">Transforming lives, 1% daily.</p>
           <Button 
-            className="mb-6 bg-[#346FF5] hover:bg-blue-700 text-white transition font-bold"
+            className="mb-6 bg-[#346FF5] hover:bg-blue-700 text-white transition font-bold py-3 px-6 text-lg"
             onClick={() => window.open('https://tally.so/r/wzZRZq', '_blank')}
           >
             Contact Us
