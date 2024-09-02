@@ -70,7 +70,7 @@ const Index = () => {
       <main className="container mx-auto px-4 pt-20 pb-12">
         <motion.section className="text-center mb-24" {...fadeInUp}>
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6">Improve yourself <span className="text-[#FF0000]">daily</span> by 1%</h2>
-          <p className="text-xl md:text-2xl mb-16 mt-12">LEARN ANYTHING FROM YOUR FAVOURITE CREATOR</p>
+          <p className="text-xl md:text-2xl mb-16 mt-12">Learn anything from your favourite creator</p>
           <Button 
             type="button" 
             className="bg-[#FF0000] hover:bg-red-700 text-white transition font-bold py-4 px-8 text-xl"
